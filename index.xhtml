@@ -1,0 +1,88 @@
+   <script type="text/javascript">
+          //$(window.parent).scroll(function (event) for iframe
+            $(window.parent).scroll(function (event) {
+                //   console.log($(window.parent).scrollTop());
+                var growl1 =  "form:msg";              
+                setElementPosition(growl1);
+  
+            });
+
+
+            function setElementPosition(elementName){
+                if ($(window.parent).scrollTop() > 1200) {
+                    removeClass(elementName);
+                    document.getElementById(elementName).classList.add("top1200");
+                } else if ($(window.parent).scrollTop() > 1000) {
+                    removeClass(elementName);
+                    document.getElementById(elementName).classList.add("top1000");
+                } else if ($(window.parent).scrollTop() > 800) {
+                    removeClass(elementName);
+                    document.getElementById(elementName).classList.add("top800");
+                } else if ($(window.parent).scrollTop() > 600) {
+                    removeClass(elementName);
+                    document.getElementById(elementName).classList.add("top600");
+                } else if ($(window.parent).scrollTop() > 400) {
+                    removeClass(elementName);
+                    document.getElementById(elementName).classList.add("top400");
+                } else if ($(window.parent).scrollTop() > 200) {
+                    removeClass(elementName);
+                    document.getElementById(elementName).classList.add("top200");
+                } else if ($(window.parent).scrollTop() > 0) {
+                    removeClass(elementName);
+                    document.getElementById(elementName).classList.add("top0");
+                }
+            }
+
+
+
+            function removeClass(elementName) {
+                document.getElementById(elementName).classList.remove("ui-growl");
+                document.getElementById(elementName).classList.remove("top0");
+                document.getElementById(elementName).classList.remove("top200");
+                document.getElementById(elementName).classList.remove("top400");
+                document.getElementById(elementName).classList.remove("top600");
+                document.getElementById(elementName).classList.remove("top800");
+                document.getElementById(elementName).classList.remove("top1000");
+                document.getElementById(elementName).classList.remove("top1200");
+            }
+
+        </script>
+        
+           <style>
+            .top0 {
+                top: 150px;
+                position: fixed;
+                right: 20px;
+            }
+            .top200 {
+                top: 350px;
+                position: fixed;
+                right: 20px;
+            }
+            .top400 {
+                top: 550px;
+                position: fixed;
+                right: 20px;
+            }
+            .top600 {
+                top: 750px;
+                position: fixed;
+                right: 20px;
+            }
+            .top800 {
+                top: 950px;
+                position: fixed;
+                right: 20px;
+            }
+            .top1000 {
+                top: 1150px;
+                position: fixed;
+                right: 20px;
+            }
+            .top1200 {
+                top: 1350px;
+                position: fixed;
+                right: 20px;
+            }
+
+        </style>
